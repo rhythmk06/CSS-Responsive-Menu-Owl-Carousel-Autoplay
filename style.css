@@ -98,6 +98,8 @@ input[type=text] {
     float: right;
 }
 
+/*----------Owl Carousel Custom css-----------*/
+
 #blocks {
 
     height: 200px;
@@ -108,6 +110,7 @@ input[type=text] {
     position: relative;
     top: 125px;
 }
+
 
 .item {
 
