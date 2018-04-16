@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu with Owl Carousel Autoplay</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Owl Carousel Plugin Files -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=montserrat' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="upper" style="background-color: #252222; height:40px">
+                    <span id="bar"><i class="fas fa-bars"></i></span>
+                    <span id="search"><i class="fas fa-search"></i></span>
+                </div>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Service.html">Service</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                <form>
+                    <input type="text" placeholder="search"></input>
+                </form>
+            </nav>
+        </header>
+        <!-- /header -->
+        <section>
+            <div class="owl-carousel owl-theme" id="blocks">
+                <div class="item">
+                    <h4>1</h4></div>
+                <div class="item">
+                    <h4>2</h4></div>
+                <div class="item">
+                    <h4>3</h4></div>
+                <div class="item">
+                    <h4>4</h4></div>
+                <div class="item">
+                    <h4>5</h4></div>
+                <div class="item">
+                    <h4>6</h4></div>
+                <div class="item">
+                    <h4>7</h4></div>
+                <div class="item">
+                    <h4>8</h4></div>
+                <div class="item">
+                    <h4>9</h4></div>
+                <div class="item">
+                    <h4>10</h4></div>
+                <div class="item">
+                    <h4>11</h4></div>
+                <div class="item">
+                    <h4>12</h4></div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+// JQuery
+// Owl Carousel Intialize
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items: 4,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true
+});
+</script>
+<script>
+// Toggle Menu in Responsive Mode
+$(document).ready(function() {
+
+    if ($(window).width() < '768') {
+
+        $("#bar").on('click', function() {
+            $("ul").stop().slideToggle();
+        });
+
+        $("#search").on('click', function() {
+            $("form").stop().slideToggle();
+
+        });
+    }
+});
+</script>
+
+</html>
